@@ -36,6 +36,8 @@ coverage
 
 vendor/
 
+frontend
+
 # nyc test coverage
 .nyc_output
 
