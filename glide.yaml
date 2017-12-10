@@ -1,0 +1,14 @@
+package: github.com/bluebeel/orm
+import:
+- package: github.com/gin-gonic/gin
+  version: v1.2
+- package: github.com/jinzhu/gorm
+  version: v1.0
+- package: github.com/jinzhu/copier
+- package: github.com/gin-contrib/static
+- package: github.com/auth0-community/auth0
+- package: gopkg.in/square/go-jose.v2
+  version: v2.1.3
+- package: github.com/go-errors/errors
+- package: github.com/gin-contrib/cors
+  version: v1.2
