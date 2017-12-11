@@ -8,7 +8,8 @@ import (
 	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
 	"github.com/jinzhu/gorm"
-	_ "github.com/jinzhu/gorm/dialects/sqlite"
+	_ "github.com/jinzhu/gorm/dialects/postgres"
+	//_ "github.com/jinzhu/gorm/dialects/sqlite"
 )
 
 // App has router and db instances
@@ -19,7 +20,8 @@ type App struct {
 
 // Initialize initializes the app with predefined configuration
 func (a *App) Initialize() {
-	db, err := gorm.Open("sqlite3", "orm.db")
+	//db, err := gorm.Open("sqlite3", "orm.db")
+	db, err := gorm.Open("postgres", "host=crypto.cbnwm8jvjnvp.eu-west-1.rds.amazonaws.com user=bluebeel dbname=crypto password=crypto2132 sslmode=disable")
 	if err != nil {
 		panic("failed to connect database")
 	}
