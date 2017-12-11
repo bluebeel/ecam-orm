@@ -1,18 +1,14 @@
 package app
 
 import (
-	"net/http"
-
 	"time"
 
-	"github.com/auth0-community/auth0"
-	"github.com/bluebeel/orm/app/handler"
-	"github.com/bluebeel/orm/app/model"
+	"github.com/bluebeel/ecam-orm/app/handler"
+	"github.com/bluebeel/ecam-orm/app/model"
 	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
 	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/sqlite"
-	"gopkg.in/square/go-jose.v2"
 )
 
 // App has router and db instances
@@ -64,25 +60,6 @@ func (a *App) setRouters() {
 	a.Delete("/projects/:title/tasks/:id", a.DeleteTask)
 	a.Put("/projects/:title/tasks/:id/complete", a.CompleteTask)
 	a.Delete("/projects/:title/tasks/:id/complete", a.UndoTask)
-}
-
-func authMiddleware(c *gin.Context) {
-	secret := []byte("ZWoVNCIlPu7y0asYTY-Bwrca8M3YKoYui-4BvLePp-wuN2i9D6qIn7Q-nL827b6E")
-	secretProvider := auth0.NewKeyProvider(secret)
-	audience := "iQQ1DSXfV1aXp9bpPjdxoPNxIgMYVMFw"
-
-	configuration := auth0.NewConfiguration(secretProvider, []string{audience}, "https://ecam-bluebeel.eu.auth0.com/", jose.HS256)
-	validator := auth0.NewValidator(configuration)
-
-	_, err := validator.ValidateRequest(c.Request)
-
-	if err != nil {
-		c.JSON(http.StatusUnauthorized, gin.H{"error": "invalid token"})
-		c.Abort()
-		return
-	}
-	// Pass on to the next-in-chain
-	c.Next()
 }
 
 // Get wraps the router for GET method

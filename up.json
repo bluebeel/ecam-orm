@@ -1,0 +1,13 @@
+{
+    "name": "orm",
+    "regions": [
+      "eu-west-2"
+    ],
+    "lambda": {
+      "memory": 128
+    },
+    "hooks": {
+      "build": "GOOS=linux GOARCH=amd64 go build -o server main.go",
+      "clean": "rm server"
+    }
+  }
