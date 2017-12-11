@@ -3,8 +3,8 @@ package app
 import (
 	"time"
 
-	"github.com/bluebeel/ecam-orm/app/handler"
-	"github.com/bluebeel/ecam-orm/app/model"
+	"github.com/bluebeel/orm/app/handler"
+	"github.com/bluebeel/orm/app/model"
 	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
 	"github.com/jinzhu/gorm"

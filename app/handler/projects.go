@@ -5,7 +5,7 @@ import (
 
 	"log"
 
-	"github.com/bluebeel/ecam-orm/app/model"
+	"github.com/bluebeel/orm/app/model"
 	"github.com/gin-gonic/gin"
 	"github.com/jinzhu/copier"
 	"github.com/jinzhu/gorm"

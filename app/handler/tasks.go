@@ -4,7 +4,7 @@ import (
 	"net/http"
 	"strconv"
 
-	"github.com/bluebeel/ecam-orm/app/model"
+	"github.com/bluebeel/orm/app/model"
 	"github.com/gin-gonic/gin"
 	"github.com/jinzhu/copier"
 	"github.com/jinzhu/gorm"
@@ -119,7 +119,7 @@ func DeleteTask(db *gorm.DB, c *gin.Context) {
 		return
 	}
 
-	if err := db.Delete(&project).Error; err != nil {
+	if err := db.Delete(&task).Error; err != nil {
 		c.JSON(http.StatusInternalServerError, gin.H{
 			"error": err.Error(),
 		})

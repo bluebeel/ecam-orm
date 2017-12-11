@@ -2,12 +2,6 @@
 
 
 [[projects]]
-  branch = "master"
-  name = "github.com/bluebeel/orm"
-  packages = ["app"]
-  revision = "21d1bda62df1e242526fd48e3d7da52fd44c14cb"
-
-[[projects]]
   name = "github.com/gin-contrib/cors"
   packages = ["."]
   revision = "cf4846e6a636a76237a28d9286f163c132e841bc"
@@ -88,6 +82,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "1b9a7866fc3d57415d3ed2b6e472677b387b4f4d2ece360dfbf0cb62b5abd284"
+  inputs-digest = "341715350e50aaf8edc4bd49aa5b80396c5acfc86f2ac2ac2c5584c5a60eea2b"
   solver-name = "gps-cdcl"
   solver-version = 1
