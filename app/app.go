@@ -9,7 +9,6 @@ import (
 	"github.com/gin-gonic/gin"
 	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/postgres"
-	//_ "github.com/jinzhu/gorm/dialects/sqlite"
 )
 
 // App has router and db instances

@@ -5,7 +5,7 @@
   branch = "master"
   name = "github.com/bluebeel/orm"
   packages = ["app"]
-  revision = "57395345c21a4d45b11f3f3af1db7db669a9caf2"
+  revision = "21d1bda62df1e242526fd48e3d7da52fd44c14cb"
 
 [[projects]]
   name = "github.com/gin-contrib/cors"
@@ -39,7 +39,7 @@
 
 [[projects]]
   name = "github.com/jinzhu/gorm"
-  packages = [".","dialects/postgres","dialects/sqlite"]
+  packages = [".","dialects/postgres"]
   revision = "5174cc5c242a728b435ea2be8a2f7f998e15429b"
   version = "v1.0"
 
@@ -62,22 +62,10 @@
   version = "v0.0.3"
 
 [[projects]]
-  name = "github.com/mattn/go-sqlite3"
-  packages = ["."]
-  revision = "ed69081a91fd053f17672236b0dd52ba7485e1a3"
-  version = "v1.4.0"
-
-[[projects]]
   branch = "master"
   name = "github.com/ugorji/go"
   packages = ["codec"]
   revision = "f57d8945648dbfe4c332cff9c50fb57548958e3f"
-
-[[projects]]
-  branch = "master"
-  name = "golang.org/x/net"
-  packages = ["context"]
-  revision = "dc871a5d77e227f5bbf6545176ef3eeebf87e76e"
 
 [[projects]]
   branch = "master"
@@ -100,6 +88,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "7b760022305ce7274089edf78c69084a18a9bc3688b728e27bbbb9be391cef7e"
+  inputs-digest = "1b9a7866fc3d57415d3ed2b6e472677b387b4f4d2ece360dfbf0cb62b5abd284"
   solver-name = "gps-cdcl"
   solver-version = 1
