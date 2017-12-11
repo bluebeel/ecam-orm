@@ -1,8 +1,0 @@
-GET http://localhost:3000/projects
-Accept:*/*
-Cache-Control:no-cache
-
-<> 2017-12-10T033830.200.json
-
-###
-
