@@ -34,7 +34,8 @@ lib-cov
 # Coverage directory used by tools like istanbul
 coverage
 
-vendor/
+server
+vendor
 
 frontend
 
